@@ -37,7 +37,7 @@ const Header = () => {
                 type="text"
                 id="location-search"
                 placeholder="Search for destination"
-                className="w-full text-xs bg-transparent border-none p-0 focus:ring-0 text-sm placeholder-gray-400"
+                className="w-full text-xs bg-transparent border-none p-0 focus:ring-0 placeholder-gray-400"
               />
             </div>
 
@@ -48,7 +48,7 @@ const Header = () => {
                 type="text"
                 id="checkin-date"
                 placeholder="Add date"
-                className="w-full text-xs bg-transparent border-none p-0 focus:ring-0 text-sm placeholder-gray-400"
+                className="w-full text-xs bg-transparent border-none p-0 focus:ring-0 placeholder-gray-400"
               />
             </div>
 
@@ -59,7 +59,7 @@ const Header = () => {
                 type="text"
                 id="checkout-date"
                 placeholder="Add date"
-                className="w-full text-xs bg-transparent border-none p-0 focus:ring-0 text-sm placeholder-gray-400"
+                className="w-full text-xs bg-transparent border-none p-0 focus:ring-0 placeholder-gray-400"
               />
             </div>
 
@@ -71,7 +71,7 @@ const Header = () => {
                   type="text"
                   id="num-people"
                   placeholder="Add guest"
-                  className="w-full text-xs bg-transparent border-none p-0 focus:ring-0 text-sm placeholder-gray-400"
+                  className="w-full text-xs bg-transparent border-none p-0 focus:ring-0 placeholder-gray-400"
                 />
               </div>
               <button
