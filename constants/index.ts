@@ -1,3 +1,8 @@
+import heroBg from '../public/assets/hero-bg.png';
+import { PropertyProps } from '../interfaces';
+
+export const heroSectionImage = heroBg;
+
 // Example constant
 export const API_URL = 'https://api.example.com'
 
