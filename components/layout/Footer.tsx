@@ -34,7 +34,7 @@ const Footer = () => {
           {/* Column 1: Logo and Description */}
           <div className="sm:col-span-2 lg:col-span-3 mr-10">
             <img src={logo} alt="ALX Logo" className="h-8 mb-4" />
-            <p className="mt-4 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed">
               ALX is a platform where travelers can discover and book unique, comfortable, and affordable lodging options worldwide. From cozy, city apartments and tranquil countryside retreats to exotic beachside villas, ALX connects you with the perfect place to stay for any trip.
             </p>
           </div>

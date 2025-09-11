@@ -12,24 +12,37 @@ This a foundational Airbnb clone built to showcase responsive design, reusable c
 ## 🗂 Project Structure
 
 ```text
-📦 alx-listing-app/
+📦 alx-listing-app-00/
 ├── components/
-│   └── common/
-│       ├── Card.tsx          # Reusable listing card component
-│       └── Button.tsx        # Reusable button component
-├── interfaces/
-│   └── index.ts              # TypeScript interfaces like CardProps and ButtonProps
+│   ├── common/
+│   │   ├── Card.tsx           # Reusable property card component
+│   │   └── Button.tsx         # Reusable button component
+│   └── layout/
+│       ├── Header.tsx         # Navigation bar with logo, links, and search
+│       ├── Footer.tsx         # Footer with copyright/info
+│       └── Layout.tsx         # Wrapper for consistent page structure
+│
 ├── constants/
-│   └── index.ts              # Centralized static data or config values
-├── public/
-│   └── assets/               # Images, icons, and other visual assets
+│   └── index.ts               # Static data like PROPERTYLISTINGSAMPLE and filters
+│
+├── interfaces/
+│   └── index.ts               # TypeScript interfaces (CardProps, ButtonProps, PropertyProps)
+│
 ├── pages/
-│   └── index.tsx             # Main landing page for property listings
+│   ├── _app.tsx               # App wrapper with Layout
+│   └── index.tsx              # Home page with hero, filters, and listings
+│
+├── public/
+│   └── assets/                # Images and icons (e.g. Book-1.png, background.jpg)
+│
 ├── styles/
-│   └── globals.css           # Tailwind base layer
-├── tailwind.config.js        # Tailwind configuration
-├── package.json              # Project dependencies and metadata
-└── README.md                 # Project documentation
+│   └── globals.css            # Tailwind base styles
+│
+├── tailwind.config.js         # Tailwind configuration
+├── tsconfig.json              # TypeScript configuration
+├── package.json               # Project metadata and dependencies
+└── README.md                  # Project documentation
+
 ```
 
 ## 🧰 Prerequisites
