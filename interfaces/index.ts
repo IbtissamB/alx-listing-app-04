@@ -1,14 +1,15 @@
+import { ReactNode } from "react";
+
 export interface CardProps {
-  title: string;
-  description: string;
-  imageUrl: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 export interface ButtonProps {
-  label: string;
+  className?: string;
   onClick?: () => void;
-  styles?: string;
-  type?: "button" | "submit" | "reset";
+  children?: ReactNode;
+  // other props
 }
 
 export interface PropertyProps {
