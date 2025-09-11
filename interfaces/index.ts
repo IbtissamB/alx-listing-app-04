@@ -12,6 +12,13 @@ export interface ButtonProps {
   // other props
 }
 
+export interface PillProps {
+  className?: string;
+  label: string;
+  onClick?: () => void;
+  selected?: boolean;
+}
+
 export interface PropertyProps {
   name: string;
   address: {
