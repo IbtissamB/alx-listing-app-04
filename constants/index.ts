@@ -3,8 +3,14 @@ import { PropertyProps } from '../interfaces';
 
 export const heroSectionImage = heroBg;
 
-// Example constant
-export const API_URL = 'https://api.example.com'
+export const filters = [
+  "All",
+  "Top Villa",
+  "Free Reschedule",
+  "Book now, pay later",
+  "Self checkIn",
+  "Instant book",
+];
 
 export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
   {
