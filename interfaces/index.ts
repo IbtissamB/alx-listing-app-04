@@ -13,7 +13,6 @@ export interface ButtonProps {
 }
 
 export interface PillProps {
-  className?: string;
   label: string;
   onClick?: () => void;
   selected?: boolean;

@@ -1,14 +1,15 @@
 // pages/index.tsx
 import Image from 'next/image';
-import { heroSectionImage, PROPERTYLISTINGSAMPLE } from '../constants';
+import { heroSectionImage, PROPERTYLISTINGSAMPLE, filters } from '../constants';
 import Button from '@/components/common/Button';
 import Card from '@/components/common/Card';
+import Pill from '@/components/common/Pill';
 
 
 export default function Home() {
   return (
-    <>
-      <section className="mx-10 mt-10"> {/* Added mt-10 */}
+    <main>
+      <section className="mx-10 mt-6"> {/* Added mt-10 */}
         <div className="relative h-[500px] w-full rounded-3xl overflow-hidden"> {/* Added rounded-full */}
           {/* Background image with overlay */}
           <div className="absolute inset-0  overflow-hidden"> {/* Added rounded-full and overflow-hidden */}
@@ -32,12 +33,21 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Filter Section */}
+      <section className="flex flex-wrap gap-3 justify-left px-4 py-6 bg-white font-semibold">
+        {filters.map((label, index) => (
+          <Pill 
+            key={index} 
+            label={label} 
+          />
+        ))}
+      </section>
 
       {/* Listing Section */}
       <section className="px-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4 pb-10 bg-white">
         {PROPERTYLISTINGSAMPLE.map((property, idx) => (
           <Card key={idx}>
-            <div className="relative w-full h-52 rounded-lg overflow-hidden mb-4">
+            <div className="border shadow-md border-gray-300 relative w-full h-52 rounded-lg overflow-hidden mb-4">
               <Image
                 src={property.image}
                 alt={property.name}
@@ -46,17 +56,20 @@ export default function Home() {
                 priority={idx === 0}
               />
             </div>
-            <h2 className="text-xl font-semibold">{property.name}</h2>
-            <p className="text-sm text-gray-600">
+
+            <div className='flex justify-between items-center'>
+              <h2 className="text-md lg:text-lg font-semibold">{property.name}</h2>
+              <p className="mt-1 text-sm">⭐ {property.rating}</p>
+            </div>
+            
+            <p className="text-sm font-semibold text-gray-600">
               {property.address.city}, {property.address.state},{" "}
               {property.address.country}
             </p>
-            <p className="mt-1 text-sm">Rating: ⭐ {property.rating}</p>
-            <p className="font-semibold mt-1">${property.price}</p>
-            <Button className="mt-3">Book Now</Button>
+            <p className="font-semibold mt-1 text-right">${property.price}/n</p>
           </Card>
         ))}
       </section>
-    </>
+    </main>
   );
 }
