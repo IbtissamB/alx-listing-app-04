@@ -1,5 +1,9 @@
 import { ReactNode } from "react";
 
+export type LayoutProps = {
+  children: ReactNode;
+}
+
 export interface CardProps {
   className?: string;
   children?: React.ReactNode;
@@ -35,4 +39,12 @@ export interface PropertyProps {
   };
   image: string;
   discount: string;
+}
+
+export interface BookingDetails {
+  propertyName: string;
+  startDate: string;
+  totalNights: number;
+  bookingFee: number;
+  price: number;
 }
